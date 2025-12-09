@@ -1,0 +1,55 @@
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin:50px;
+}
+ul{
+  list-style: none;
+}
+.task-item {
+  width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.task-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.task-item-footer{
+display: flex;
+flex-direction: row;
+}
+.priority-badge {   
+  padding: 4px 4px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  line-height: 1;             
+}
+
+.priority-badge.high {
+  color: red;
+}
+
+.priority-badge.medium {
+  color: orange;
+}
+
+.priority-badge.low {
+  color: green;
+}
+.due{
+  margin-left:20px;
+}
