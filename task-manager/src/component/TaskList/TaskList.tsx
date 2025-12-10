@@ -1,15 +1,9 @@
 
 import TaskItem from "../TaskItem/TaskItem.tsx";
 import type { TaskListProps } from "../../types/index.ts";
-import {useState} from 'react'
 import type {Task} from "../../types/index.ts"
-export default function TaskList({tasks, onStatusChange }: TaskListProps) {
+export default function TaskList({tasks, onStatusChange,onDelete }: TaskListProps) {
 
-const [task, setTasks] = useState<Task[]>(tasks);
-const handleDelete = (id: string) => {
-    const updatedList = task.filter((item) => item.id !== id);
-    setTasks(updatedList);
-  };
    
   return (
     <ul>
@@ -18,7 +12,7 @@ const handleDelete = (id: string) => {
           key={task.id}
           task={task}
           onStatusChange={onStatusChange}
-          onDelete={handleDelete}
+          onDelete={() => onDelete(task.id)}
         />
       ))}
     </ul>

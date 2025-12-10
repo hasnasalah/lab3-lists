@@ -53,3 +53,7 @@ flex-direction: row;
 .due{
   margin-left:20px;
 }
+.task-filter{
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
